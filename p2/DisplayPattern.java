@@ -5,8 +5,7 @@ public class DisplayPattern {
                 (\\__/) I am an
                 ( @w@)       OOO  W     W L
                 /) W )      O   O  W W W  L
-                 ^  ^        OOO    W W   L L L
-                """);
+                 ^  ^        OOO    W W   L L L""");
 
     }    
 }
