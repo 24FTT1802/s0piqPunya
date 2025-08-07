@@ -5,7 +5,7 @@ public class ComputeArea {
         double base = 4;
         double height = 6;
         double radius = 8;
-        double pi = 3.14;
+        final double pi = 3.14;
 
         areaSquare = Math.pow(base, 2);
         areaTri = 0.5 * base * height;
