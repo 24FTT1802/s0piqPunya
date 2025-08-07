@@ -1,5 +1,6 @@
 public class DisplayPattern2 {
     public static void main(String[] args) {
+        
         System.out.println("""
                    .=""=.
                   /      \\
@@ -9,7 +10,7 @@ public class DisplayPattern2 {
                 / /      \\ \\      CHIP CHIP!
                 \\/\\      /\\/
                    '.  .'
-                   /|\\/|\\
-                """);
+                   /|\\/|\\""");
+        
     }
 }
