@@ -10,7 +10,7 @@ public class RockPaperScissor {
 
         Scanner input = new Scanner(System.in);
 
-        int ans = (int)(Math.random()*3);
+        int ans = (int)(Math.random() * Integer.MAX_VALUE) % 3;
 
         System.out.println("Enter rock (0), paper (1), scissor (2)");
         int choice = input.nextInt();
