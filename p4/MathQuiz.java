@@ -20,7 +20,7 @@ public class MathQuiz {
 
         System.out.printf("What is %d %% %d ?\n", num1, num2);
         int ansModul = input.nextInt();
-        System.out.printf("%d %% %d = %d is %b", num1, num2, ansSum, modul==ansModul);
+        System.out.printf("%d %% %d = %d is %b", num1, num2, ansModul, modul==ansModul);
 
         input.close();
     }
