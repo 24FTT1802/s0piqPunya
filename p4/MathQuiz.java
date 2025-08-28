@@ -12,12 +12,12 @@ public class MathQuiz {
 
         System.out.printf("What is %d + %d ?\n", num1, num2);
         int ansSum = input.nextInt();
-        System.out.printf("%d + %d = %d ? %b\n", num1, num2, ansSum, (num1+num2));
+        System.out.printf("%d + %d = %d ? %b\n", num1, num2, ansSum, (num1+num2)==ansSum);
 
         
         System.out.printf("\nWhat is %d %% %d ?\n", num1, num2);
         int ansModul = input.nextInt();
-        System.out.printf("%d %% %d = %d ? %b\n", num1, num2, ansModul, (num1%num2));
+        System.out.printf("%d %% %d = %d ? %b\n", num1, num2, ansModul, (num1%num2)==ansModul);
 
         input.close();
     }
