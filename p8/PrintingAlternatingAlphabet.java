@@ -11,6 +11,7 @@ public class PrintingAlternatingAlphabet {
 
         for (int i = 0; i < alphabet.length; i++){
             System.out.print(alphabet[i] + " ");
+            System.out.print(alphabet[25-i] + " ");
         }
 
         input.close();
