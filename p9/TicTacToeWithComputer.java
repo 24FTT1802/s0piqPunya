@@ -14,8 +14,7 @@ public class TicTacToeWithComputer {
                 -----------
                    |   |   
                 -----------
-                   |   |   
-                   """);
+                   |   |   """);
 
         char player = 'X';
         char comp = 'O';
@@ -23,22 +22,25 @@ public class TicTacToeWithComputer {
                             {' ', ' ', ' '}, 
                             {' ', ' ', ' '}};
         
-        boolean[][] isTaken = {{false, false, false}, 
-                               {false, false, false}, 
-                               {false, false, false}};
-
-        
         for (int apalah = 0; apalah < 5 && game == true; apalah++){
-            
-            System.out.println("player's turn");
-            System.out.print("Enter a row (0, 1 or 2): ");
-            int choiceRow = input.nextInt();
-            System.out.print("Enter column (0, 1 or 2): ");
-            int choiceColumn = input.nextInt();
 
-            isTaken[choiceRow][choiceColumn] = true;
-            space2D[choiceRow][choiceColumn] = player;
-            
+            boolean validMove = false;
+            while (!validMove) {
+                System.out.println("player's turn");
+                System.out.print("Enter a row (0, 1 or 2): ");
+                int choiceRow = input.nextInt();
+                System.out.print("Enter column (0, 1 or 2): ");
+                int choiceColumn = input.nextInt();
+                if (space2D[choiceRow][choiceColumn] == ' '){
+                    validMove = true;
+                    space2D[choiceRow][choiceColumn] = player;
+                }
+                else {
+                    System.out.println("Move choice is taken");
+                }
+            }
+            System.out.println();
+                
             if (
                 // Horizontal
                 (space2D[0][0] == player && space2D[0][1] == player && space2D[0][2] == player) || 
@@ -64,9 +66,8 @@ public class TicTacToeWithComputer {
                     compChoiceRow = (int)(Math.random()*Integer.MAX_VALUE % 3);
                     compChoiceColumn = (int)(Math.random()*Integer.MAX_VALUE % 3);
 
-                    if (isTaken[compChoiceRow][compChoiceColumn]==false){
+                    if (space2D[compChoiceRow][compChoiceColumn] == ' '){
                         validChoice = true;
-                        isTaken[compChoiceRow][compChoiceColumn] = true;
                         space2D[compChoiceRow][compChoiceColumn] = comp;
                     }
                 }
@@ -87,7 +88,6 @@ public class TicTacToeWithComputer {
                     System.out.println("game ended, CPU win");
                     game = false;
             }
-            System.out.println();
 
             System.out.printf("""
                  %c | %c | %c 
