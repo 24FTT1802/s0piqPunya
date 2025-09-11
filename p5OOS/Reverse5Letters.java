@@ -11,16 +11,14 @@ public class Reverse5Letters {
         System.out.print("Enter the 5 letters word: ");
         String word = input.next();
 
-        if(word.length() == 5){
-            char char1 = word.charAt(0);
-            char char2 = word.charAt(1);
-            char char3 = word.charAt(2);
-            char char4 = word.charAt(3);
-            char char5 = word.charAt(4);
-
-            System.out.printf("The reverse of the word %s is %c%c%c%c%c", word, char5, char4, char3, char2, char1);
+        String reverseWord = "";    
+        
+        for (int i = word.length()-1; i >= 0; i--){
+            reverseWord += word.charAt(i);
         }
 
+        System.out.printf("The reverse of the word %s is %s", word, char5, char4, char3, char2, char1);
+        
         input.close();
     }
 }
